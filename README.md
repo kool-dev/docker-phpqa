@@ -6,6 +6,27 @@ Minimal PHP QA Docker image focused on loca/CI static analysis, styling and othe
 
 It's plays nicely with [kool.dev](https://github.com/kool-dev/kool) managed environments, but can fit in any other PHP use-case.
 
+#### Tools included in the image
+
+**Static analysis**
+
+- Phan - static analyzer for PHP (`phan`)
+- PHP Mess Detector (`phpmd`)
+- PHP Copy/Paste Detector (`phpcpd`)
+
+**Code Style**
+
+- PHP Coding Standards Fixer (`php-cs-fixer`)
+
+**Security**
+
+- Local PHP Security Checker (`local-php-security-checker`)
+
+**Testing**
+
+- PHPUnit 9.5 (`phpunit`)
+- PHPUnit 10 (`phpunit10` for cutting-edge testing)
+
 ## Usage
 
 Just execute any QA tool available straight from a new container. Using [`kool`](https://github.com/kool-dev/kool) is the prefered way:
