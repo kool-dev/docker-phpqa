@@ -1,0 +1,20 @@
+{
+    "output": ".",
+    "builds": [
+        {
+            "name": "7.4",
+            "data": {
+                "from": "kooldev/php:7.4"
+            },
+            "files": [
+                {
+                    "name": "Dockerfile",
+                    "path": "template/Dockerfile"
+                }, {
+                    "name": "entrypoint.sh",
+                    "path": "template/entrypoint"
+                }
+            ]
+        }
+    ]
+}
