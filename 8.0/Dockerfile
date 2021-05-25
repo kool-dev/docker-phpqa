@@ -1,4 +1,4 @@
-FROM {{ $from }}
+FROM kooldev/php:8.0
 
 # make Composer global vendor/bin available through PATH
 RUN sed -i 's/\(^export PATH=.*\)/\1:\/root\/.composer\/vendor\/bin:\/phars/' /etc/profile

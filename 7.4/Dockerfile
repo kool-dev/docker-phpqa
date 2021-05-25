@@ -7,13 +7,16 @@ RUN sed -i 's/\(^export PATH=.*\)/\1:\/root\/.composer\/vendor\/bin:\/phars/' /e
 RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
     && pecl install ast \
     && echo 'extension=ast.so' >> /usr/local/etc/php/php.ini \
+    && docker-php-ext-enable xdebug \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/* /tmp/*
 
 # install QA tools
 RUN \
     # install and set up QA tools from Composer
-    composer global require friendsofphp/php-cs-fixer phan/phan \
+    composer global require squizlabs/php_codesniffer \
+        friendsofphp/php-cs-fixer \
+        phan/phan \
     # download PHAR and make them executable
     && mkdir /phars \
     && curl -Lf https://phpmd.org/static/latest/phpmd.phar -o /phars/phpmd \
