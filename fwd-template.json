@@ -15,6 +15,21 @@
                     "path": "template/entrypoint"
                 }
             ]
+        },
+        {
+            "name": "8.0",
+            "data": {
+                "from": "kooldev/php:8.0"
+            },
+            "files": [
+                {
+                    "name": "Dockerfile",
+                    "path": "template/Dockerfile"
+                }, {
+                    "name": "entrypoint.sh",
+                    "path": "template/entrypoint"
+                }
+            ]
         }
     ]
 }
