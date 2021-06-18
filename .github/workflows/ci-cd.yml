@@ -25,7 +25,6 @@ jobs:
 
       - name: Tests
         run: |
-          docker run kooldev/phpqa:${{ matrix.version }} phpunit10 --version
           docker run kooldev/phpqa:${{ matrix.version }} phpunit --version
           docker run kooldev/phpqa:${{ matrix.version }} composer -V
           docker run kooldev/phpqa:${{ matrix.version }} phan --version
