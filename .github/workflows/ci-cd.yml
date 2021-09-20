@@ -30,6 +30,7 @@ jobs:
           docker run kooldev/phpqa:${{ matrix.version }} phan --version
           docker run kooldev/phpqa:${{ matrix.version }} phpmd --version
           docker run kooldev/phpqa:${{ matrix.version }} phpcpd --version
+          docker run kooldev/phpqa:${{ matrix.version }} php-cs-fixer --version
           docker run kooldev/phpqa:${{ matrix.version }} local-php-security-checker -help
 
       - name: Login to DockerHub
