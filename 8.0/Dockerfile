@@ -1,8 +1,7 @@
 FROM kooldev/php:8.0
 
 # make Composer global vendor/bin available through PATH
-RUN echo "export PATH=/root/.composer/vendor/bin:\$PATH" > /etc/profile.d/composer.sh
-RUN echo "export PATH=/phars:\$PATH" > /etc/profile.d/phars.sh
+RUN echo "export PATH=\$PATH:\/root\/.composer\/vendor\/bin:\/phars/" | tee -a /etc/profile
 
 # install dependencies (ast)
 RUN apk add --no-cache --virtual .build-deps $PHPIZE_DEPS \
