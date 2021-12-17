@@ -49,8 +49,9 @@ docker run --rm --init -it -v $(pwd):/app -w /app kooldev/phpqa:7.4
 
 The image built is [`kooldev/phpqa`](https://hub.docker.com/r/kooldev/phpqa/tags?page=1&ordering=last_updated) with tags:
 
-- [**`7.4`**](https://github.com/kool-dev/docker-phpqa/blob/main/7.4/Dockerfile)
+- [**`8.1`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.1/Dockerfile)
 - [**`8.0`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.0/Dockerfile)
+- [**`7.4`**](https://github.com/kool-dev/docker-phpqa/blob/main/7.4/Dockerfile)
 
 ## Using `kool.yml`
 
@@ -60,7 +61,7 @@ Examples of what you can do in a `kool` powered environment. Add to your `kool.y
 # kool.yml
 scripts:
   # just an alias to the PHPQA container
-  phpqa: kool docker kooldev/phpqa:8.0
+  phpqa: kool docker kooldev/phpqa:8.1
   # using the alias to call each tool with predefined parameters
   # assuming your application code is located in a `app/` folder
   phan: kool run phpqa phan --color -p -l app -iy 5

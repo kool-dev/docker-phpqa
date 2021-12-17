@@ -7,3 +7,5 @@ scripts:
     - docker build --pull -t kooldev/phpqa:7.4 7.4
     # PHP 8.0
     - docker build --pull -t kooldev/phpqa:8.0 8.0
+    # PHP 8.1
+    - docker build --pull -t kooldev/phpqa:8.1 8.1
