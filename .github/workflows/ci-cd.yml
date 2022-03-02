@@ -34,7 +34,7 @@ jobs:
           docker run kooldev/phpqa:${{ matrix.version }} local-php-security-checker -help
 
       - name: Login to DockerHub
-        uses: docker/login-action@v1.10.0
+        uses: docker/login-action@v1.14.1
         if: github.ref == 'refs/heads/main' && github.repository == 'kool-dev/docker-phpqa'
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
