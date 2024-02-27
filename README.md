@@ -49,6 +49,7 @@ docker run --rm --init -it -v $(pwd):/app -w /app kooldev/phpqa:7.4
 
 The image built is [`kooldev/phpqa`](https://hub.docker.com/r/kooldev/phpqa/tags?page=1&ordering=last_updated) with tags:
 
+- [**`8.3`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.3/Dockerfile)
 - [**`8.1`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.1/Dockerfile)
 - [**`8.0`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.0/Dockerfile)
 - [**`7.4`**](https://github.com/kool-dev/docker-phpqa/blob/main/7.4/Dockerfile)
