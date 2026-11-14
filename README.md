@@ -1,6 +1,12 @@
-![CI/CD](https://github.com/kool-dev/docker-phpqa/workflows/CI/CD/badge.svg)
+# DISCONTINUED — Kool PHPQA
 
-## Description
+**Discontinued as of 2026-11-14.** This project receives no maintenance, security updates, or new releases. Existing `kooldev/phpqa` images are provided as-is and are not recommended for new projects.
+
+For new or migrated projects, manage QA tools and their versions within your project and run them on maintained PHP images.
+
+Image publishing and Docker Hub description workflows are disabled. The source, image references, and usage examples below are retained for historical reference.
+
+## Historical description
 
 Minimal PHP QA Docker image focused on local/CI static analysis, styling and other tools.
 
@@ -25,9 +31,9 @@ It's plays nicely with [kool.dev](https://github.com/kool-dev/kool) managed envi
 #### Testing
 
 - PHPUnit 9.5 (`phpunit`)
-- PHPUnit 10 (`phpunit10` for cutting-edge testing)
+- PHPUnit 10 (`phpunit10`, previously listed as cutting-edge testing)
 
-## Usage
+## Historical usage
 
 Just execute any QA tool available straight from a new container. Using [`kool`](https://github.com/kool-dev/kool) is the prefered way:
 
@@ -43,9 +49,7 @@ With vanilla Docker you would need to run:
 docker run --rm --init -it -v $(pwd):/app -w /app kooldev/phpqa:7.4
 ```
 
-> We strongly recommend checking out [`kool` CLI](https://github.com/kool-dev/kool) for more benefits to your Docker environemnts.
-
-## Available Tags
+## Historical tags
 
 The image built is [`kooldev/phpqa`](https://hub.docker.com/r/kooldev/phpqa/tags?page=1&ordering=last_updated) with tags:
 
@@ -55,7 +59,7 @@ The image built is [`kooldev/phpqa`](https://hub.docker.com/r/kooldev/phpqa/tags
 - [**`8.0`**](https://github.com/kool-dev/docker-phpqa/blob/main/8.0/Dockerfile)
 - [**`7.4`**](https://github.com/kool-dev/docker-phpqa/blob/main/7.4/Dockerfile)
 
-## Using `kool.yml`
+## Historical `kool.yml` examples
 
 Examples of what you can do in a `kool` powered environment. Add to your `kool.yml` file:
 
@@ -71,13 +75,9 @@ scripts:
   # ...
 ```
 
-## Contributing
+## Historical development reference
 
-Please feel free to use and open a PR with more QA tools you find useful to have! As a sort of roadmap these are the goals in our mind for the short term:
-
-- Make tools specific configurations available for the user in a friendly manner.
-- Ship boilerplate of CI snippets for popular engines (Github Actions, CircleCI, TravisCI).
-- Add more tools that we find helpful.
+Development has ended. The template instructions below are retained only to explain how the historical image files were generated.
 
 ### Update images with templates
 
